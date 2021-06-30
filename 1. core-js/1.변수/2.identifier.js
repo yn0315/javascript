@@ -25,7 +25,7 @@ var userphonenumber ='11';
 //관례: convention
 var user_phone_number = 1; //snake case : 파이썬이나 sql
 var userPhoneNumber = 1; //camel case: js, java 추천
-var UserPhoneNumber = 1; //pascal case : 클래스(대주제, 대제목) 이름
+var UserPhoneNumber = 1; //pascal case : 클래스(대주제, 대제목) 이름, 변수이름으로는 안씀
 
 //Hungarian case: 변수명 앞에 데이터의 모양을 표기
 var strName = '홍길동';
