@@ -15,10 +15,10 @@ console.log(5 === '5');
 console.log('=============================================');
 //다 false로 나와야 하는데 두개짜리 쓰면 이렇게 나옴 
 //동등비교(==), (!=)는 결과예측이 명시적으로 쉽지 않으므로 사용하지 않는 것을 추천, 일치비교(===) (!==)를 사용할 것
-console.log('0' ==''); //false
+console.log('0' == ''); //false
 console.log(0 == ''); //true
-console.log('0' ==0);//true
-console.log(false =='false'); //false
+console.log('0' == 0);//true
+console.log(false == 'false'); //false
 console.log(false == '0'); //true
 
 //대소비교

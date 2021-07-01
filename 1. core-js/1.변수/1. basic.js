@@ -4,6 +4,7 @@
 //변수의 선언 (공간을 만든다)
 var total;//처음에 만들 때만 var 사용
 
+
 //변수의 초기화 (값 대입)/할당
 total =500;//=은 저장의 의미!500을 토탈에 저장
 
@@ -11,7 +12,6 @@ console.log(total);//출력명령
 
 //한줄로 바로 결과필요할 때 
 var result =10 + 20;
-
 console.log(result);
 
 

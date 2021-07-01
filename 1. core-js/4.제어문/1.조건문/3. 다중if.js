@@ -13,3 +13,4 @@ if (age >= 20) {
 }else {
     console.log('미취학 아동입니다.');
 }
+
