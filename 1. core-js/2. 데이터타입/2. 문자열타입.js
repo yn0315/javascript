@@ -19,7 +19,7 @@ console.log(exStr);
 var filePath = 'D:\\temp\\new.jpg';
 console.log(filePath);
 
-//템플릿 리터럴 (ES6+)-줄개행 표현
+//템플릿 리터럴 (ES6+)-줄개행 표현 ->``
 
 console.log("==================");
 
