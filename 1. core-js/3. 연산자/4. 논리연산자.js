@@ -1,6 +1,6 @@
 
 
-//시프트 백슬래시쓰면 or
+
 var t =true; f = false;
 
 //AND 연산
@@ -12,7 +12,7 @@ console.log(f && f); //f
 console.log('================================================');
 
 //OR연산
-
+//시프트 백슬래시쓰면 or
 console.log(t || t); //t
 console.log(t || f); //t
 console.log(f || t); //t
