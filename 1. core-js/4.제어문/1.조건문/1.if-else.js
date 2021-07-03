@@ -5,7 +5,7 @@ console.log(`점수 : ${point}`);
 
 //if는 true일 경우 {} 가 실행, false면 실행 x
 
-// 결과가 한 줄일 경우에는 {} 생략 가능
+// 결과가 한 줄일 경우에는 {} 생략 가능하나 생략하지 않는 게 좋음
 if (point >= 60)  
    console.log('시험에 합격했습니다.'); 
 //    console.log('축하합니다.');
