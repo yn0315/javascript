@@ -23,7 +23,9 @@
 var rn = Math.floor(Math.random() * 8) + 2;
 // console.log(`랜덤정수${rn}`);
 
+
 for (num1 = 1; 9 >= num1; num1++) {
-        alert(`${rn} x ${num1} = ${rn*num1}`);
-        
+        alert(rn +'x'+ num1 +'='+ rn*num1);
 }
+
+
