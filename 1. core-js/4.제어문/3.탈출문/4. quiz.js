@@ -13,30 +13,35 @@
 
 var count1 = 0;
 var count2 = 0;
-var n2;
-if (mark === '+') {
-    n2 = x + y;
-} else {
-    n2 = x - y;
-}
+
 
 while (true) {
-    var x = Math.floor(Math.random() * 101);
-    var y = Math.floor(Math.random() * 101);
-    //0과 1이 랜덤으로 등장하게 한 후 0이면 +로 1이면 -로 처리
-    var rn = Math.floor(Math.random() * 2);
-    var mark = rn === 0 ? '+' : '-';
-    //n => 사용자가 입력하는 값/ n2 실제 정답
-    var n = +prompt(`${x} ${mark} ${y} = ??`)
+    var x = Math.floor(Math.random() * 100)+1;//1부터 100까지의 정수
+    var y = Math.floor(Math.random() * 100)+1;
 
-    if (n === n2) {
+    //0과 1이 랜덤으로 등장하게 한 후 0이면 +로 1이면 -로 처리
+    var rn = Math.floor(Math.random() * 2);//0 부터 2 미만
+    var realanswer;
+    var mark = rn === 0 ? '+' : '-';
+    if (mark === '+') {
+        realanswer = x + y;
+    } else {
+        realanswer = x - y;
+    }
+
+    //answer => 사용자가 입력하는 값/ realanswer 실제 정답
+    var answer = +prompt(`${x} ${mark} ${y} = ??`)
+   
+   
+    //여기서부터 본문 시작
+    if (answer === realanswer) {
         alert('정답입니다.')
         count1++
-    } else if (n !== n2 && n !== 0) {
+    } else if (answer !== realanswer && answer !== 0) {
         alert('오답입니다.')
         count2++
     }
-    if (n === 0) {
+    if (answer === 0) {
         break;
     }
 

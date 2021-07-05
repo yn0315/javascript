@@ -20,18 +20,31 @@
 4 x 9 = 36
 */
 
-var rn = Math.floor(Math.random() * 8) + 2;
+// var rn = Math.floor(Math.random() * 8) + 2;
 
 //출력할 문자
-var printText = '';
+// var printText = '';
 
-printText += '============================\n';
+// printText += '============================\n';
 
-printText +=`랜덤 구구단 ${rn}단\n`;
+// printText +=`랜덤 구구단 ${rn}단\n`;
 
-for (num1 = 1; 9 >= num1; num1++) {
+// for (num1 = 1; 9 >= num1; num1++) {
+//         // alert(`${rn} x ${num1} = ${rn*num1}`);
+//         printText +=`${rn} x ${num1} = ${rn*num1}\n`;
+// }
+// alert(printText);
+
+var rn = Math.floor(Math.random() * 8) + 2;//2 이상 10미만/  (10-2)+2
+
+var gugu = '';
+
+gugu += '============================\n';
+
+gugu +=`랜덤 구구단 ${rn}단\n`;
+
+for (num1 = 1; num1 <= 9; num1++) {
         // alert(`${rn} x ${num1} = ${rn*num1}`);
-        printText +=`${rn} x ${num1} = ${rn*num1}\n`;
+        gugu +=`${rn} x ${num1} = ${rn*num1}\n`;
 }
-alert(printText);
-
+alert(gugu);

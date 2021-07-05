@@ -9,6 +9,7 @@ for (var i =1; i <=10; i++) {
 console.log('반복문 종료');
 
 while (true) {
+    //계속 입력해야 하니까 반복문 안에 배치
     var n = +prompt('숫자를 입력하세요.');
     if (n ===0) {
         break;

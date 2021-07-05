@@ -10,3 +10,4 @@ while (n <= 10) {
 }
 
 console.log('반복문 종료: n-' + n);
+

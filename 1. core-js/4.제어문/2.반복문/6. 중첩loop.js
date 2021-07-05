@@ -16,9 +16,9 @@
 //중첩 남발금지
 console.log('=================================');
 var count= 1;
-for (var i =0; i < 5; i++) {
-    for (var j = 0; j <3; j++) {
-        for (var k=0; k <4; k++) {
+for (var i =0; i < 5; i++) {//5번 반복
+    for (var j = 0; j <3; j++) {//3번 반복
+        for (var k=0; k <4; k++) {//4번 반복
         console.log('안녕' + count++);
         }
     }
