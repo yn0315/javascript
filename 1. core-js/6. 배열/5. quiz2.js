@@ -30,5 +30,9 @@ var total = 0;
 for (var num2 of numbers) {
     total +=num2;
 }
+
+// for (num of numbers) {      //->변수 선언 안하고 그냥 만들어 본 것. 정답x
+//     total +=num;
+// }
 alert(`총합은 ${total} 입니다.`)
 

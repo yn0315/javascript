@@ -14,17 +14,19 @@
 var total= 0;
 var average;
 
-var scores = [98, 32, 66, 87, 49, 12, 100, 82];
+var scores = [98, 32, 66, 87, 49, 12, 100, 82, 100];
 
 //조건부 순회할 때 좋음
 for (var i=0; i<scores.length; i++) {
-    if (i % 2 === 0) {
+    if (i % 2 === 0) {//요소번호 0,2,4,6,8번  
+
         total +=scores[i];
     }
     
 }
+
 average = total / scores.length;
-var prettieraverage = Math.round(average*10**2) / 10**2;//소수점 둘째자리까지 나오게 반올림
+var prettieraverage = Math.round(average*10**2) / 10**2;// 10의 2승이니까 100/소수점 둘째자리까지 나오게 반올림
 
 console.log(`총점: ${total} 평균:${prettieraverage}`);
 
