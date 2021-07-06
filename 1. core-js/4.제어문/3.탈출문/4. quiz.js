@@ -16,7 +16,7 @@ var count2 = 0;
 
 
 while (true) {
-    var x = Math.floor(Math.random() * 100)+1;//1부터 100까지의 정수
+    var x = Math.floor(Math.random() * 100)+1;//1부터 101 미만까지의 정수
     var y = Math.floor(Math.random() * 100)+1;
 
     //0과 1이 랜덤으로 등장하게 한 후 0이면 +로 1이면 -로 처리
