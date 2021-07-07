@@ -31,6 +31,7 @@ console.log(dog);
 //프로퍼티 참조 2번째 방법
 console.log(dog.age);
 console.log(dog['age']);//대괄호로 참조시에는 키를 문자열로 처리해야함
+console.log(cat['favorite']);
 
 
 //프로퍼티 값 수정
@@ -56,7 +57,7 @@ console.log('==============================================');
 
 //value 뽑아내기
 for ( var key in cat) {
-    var value = cat[key];
+    var value = cat[key];//value 뽑아낼 때에는 ''쓰는 거 아님!
     console.log(`${key} : ${value}`);
 
 }
@@ -64,8 +65,9 @@ for ( var key in cat) {
 console.log('===================================================');
 
 //객체의 프로퍼티 키 존재 유무 확인
-var flag = 'kind' in cat;//키를 문자열로 써야함
+var flag = 'hobby' in cat;//키를 문자열로 써야함//hobby는 존재하지 않으니까 false뜸
 console.log(`flag : ${flag}`);
+
 
 var key = 'hobby';//문자열로 넣기!!
 if (key in dog) {

@@ -25,12 +25,12 @@ var user = {
 
 while (true) {
     var id = prompt('아이디를 입력하세요.');
-    if (id in user) {
+    if (id in user) {//입력한 id가 user 키에 존재하는가
         //사용자의 비밀번호 입력
         var pwd = prompt('비밀번호를 입력하세요.');
         //실제 비밀번호
-        var realpwd = user[id]
-        if (pwd === realpwd) {
+        var realpwd = user[id];//realpwd에 id키의 value(패스워드)를 넣어라
+        if (pwd === realpwd) {//입력한 값이 실제 비번이랑 맞냐
             alert('로그인 성공!');
             break;
         } else {
@@ -40,3 +40,4 @@ while (true) {
         alert('존재하지 않는 회원입니다.');
     }
 }
+

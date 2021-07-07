@@ -23,12 +23,12 @@ while(true){
         break;
     }
     //배열에 입력데이터 삽입
-    numbers.push(+num);
+    numbers.push(+num);//입력한 num을 숫자형태로 numbers에 대입하라.
 }
 
 var total = 0;
-for (var num2 of numbers) {
-    total +=num2;
+for (var num2 of numbers) {//numbers에 입력된 요소값을 num2에 대입하고
+    total +=num2;//num2값을 더해 total에 대입하라.
 }
 
 // for (num of numbers) {      //->변수 선언 안하고 그냥 만들어 본 것. 정답x

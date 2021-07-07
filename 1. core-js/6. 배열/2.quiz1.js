@@ -27,7 +27,7 @@ for (var i=0; i<scores.length; i++) {
 
 average = total / scores.length;
 var prettieraverage = Math.round(average*10**2) / 10**2;// 10의 2승이니까 100/소수점 둘째자리까지 나오게 반올림
-
+// var preettieraverage = Math.round(average*10**3) / 10**3//소수점 셋째자리까지 나오게 반올림
 console.log(`총점: ${total} 평균:${prettieraverage}`);
 
 //전체순회할 때 사용

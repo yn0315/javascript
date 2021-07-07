@@ -2,7 +2,7 @@
 
 var foods = ['떡볶이', '오뎅', '김말이', '닭꼬치'];
 
-//indexOf() : 배열 요소의 인덱스를 알려줌, 배열전용함수
+//indexOf() : 배열 요소의 인덱스(번호)를 알려줌, 배열전용함수
 //매서드 - 전용함수
 //탐색 실패시 -1을 반환
 
@@ -42,7 +42,7 @@ var foodStr = foods.join();//구분자 기본값은 콤마(,)
 console.log(foodStr);
 
 
-//concat(): 배열을 연결하여 복사배열을 리턴 
+//concat(): 배열을 연결하여 복사배열을 리턴 //원본 변하지 않음
 var concatedArr = arr.concat([100,200,300]);
 console.log(concatedArr);
 

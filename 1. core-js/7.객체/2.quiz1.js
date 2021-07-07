@@ -36,6 +36,6 @@ var salaries = {
 
   var total = 0;
 for( var employee in salaries) {
-    total += salaries[employee];
+    total += salaries[employee];//salaries의 key(employee)의 value값을 더해서 total에 대입하라.
 }
 console.log(`급여총합: ${total}원`);
