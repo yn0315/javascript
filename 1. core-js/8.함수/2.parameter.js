@@ -4,7 +4,7 @@
 function calcRangeTotal(begin,end) {//(begin,end)는 parameter 매개변수
     // console.log(`x: ${x} y: ${y}`);
     var total = 0;
-    for (var n = begin; n <=end; n++ ) {
+    for (var begin = 1; begin <=end; n++ ) {
         total += n;
     }
     return total;
