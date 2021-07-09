@@ -55,16 +55,18 @@ Q. n의 약수의 개수를 구하기
 
 
 function calcDivisor(n) {
+    //약수들을 저장할 배열
     var total = [];
-    var count = 0;
+    // var count = 0;
     for (var begin = 1; begin <= n; begin++) {
         if (n % begin === 0) {
-            total = begin;
-            console.log(total);
-            count++
+            total.push(begin);
+            
+            // count++
         }
     }
-    return count;
+    console.log(`[${total}]`);
+    return total.length;
 
 }
 
