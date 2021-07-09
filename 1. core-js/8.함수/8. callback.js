@@ -28,6 +28,7 @@ function showAllNumbers(n, condition) {
     }
 }
 
+
 showAllNumbers(10, function(i){
     return i % 2 === 0;
 });

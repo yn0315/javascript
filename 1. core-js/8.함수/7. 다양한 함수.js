@@ -66,7 +66,7 @@ var sayHello = () => console.log('안뇽');
 sayHello();
 
 var isEvenNumber = function(n) {
-    if (n %2 === 0) {
+    if (n % 2 === 0) {
         return true;
 
     }else {
@@ -75,16 +75,16 @@ var isEvenNumber = function(n) {
 };
 
 var isEvenNumber = function(n) {
-  return n % 2 ===0 ? true : false;
+  return n % 2 === 0 ? true : false;
 };
 
 
 var isEvenNumber = function(n) {
-    return n % 2 ===0;//어차피 논리값이니까 
+    return n % 2 === 0;//어차피 논리값이니까 트루펄스 삭제가능
 };
 
 
-var isEvenNumber = n =>  n % 2 === 0;//어차피 논리값이니까 
+var isEvenNumber = n =>  n % 2 === 0;//한 줄이면 리턴, 중괄호 삭제가능
 
 
 var result = isEvenNumber(60);

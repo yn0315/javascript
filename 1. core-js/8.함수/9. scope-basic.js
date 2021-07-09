@@ -6,7 +6,7 @@ function foo(x) {
     console.log(y);
 }
 console.log('================================================');
-// console.log(x);함수 밖에서는 못 씀
+// console.log(x);함수 밖에서는 못 씀, 호출로 써야함
 
 foo(5);
 

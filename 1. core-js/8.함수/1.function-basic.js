@@ -49,6 +49,7 @@ add1(10,20);
 var add2 = function(n1,n2) {
     return n1+n2;
 };
+
 add2(30,50);
 
 //함수를 변수에 할당
