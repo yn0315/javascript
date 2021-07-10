@@ -28,7 +28,7 @@ function calcNumbersTotalAndAverage(...numbers) {
     for (var n of numbers) {
         total += n;
     }
-    var avg = total / numbers.length;
+    var avg = total / numbers.length;//배열의 길이가 인수의 갯수랑 같으니까
     return {
         total: total,
         avg: avg

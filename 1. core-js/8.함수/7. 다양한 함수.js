@@ -13,7 +13,7 @@
 console.log('=====================================');
 
 function countdown (n) {
-    if(n < 0) return;
+    if(n < 0) return;//리턴 안 만들면 무한루프의 늪
     console.log(n);
     countdown(n -1);
 }
@@ -39,6 +39,22 @@ function outer() {
 
 
 outer();
+
+
+console.log('====================================================');
+function outer1() {
+    console.log('outer1 call');
+    var x = 1;
+    function inner1() {
+        console.log('inner1 call');
+        var y = 2;
+        console.log(x+y);
+    }
+    inner1();
+}
+outer1();
+
+console.log('======================================================');
 
 
 // 함수 리터럴, 화살표 함수(ES6)

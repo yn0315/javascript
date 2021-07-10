@@ -62,6 +62,11 @@ var result2 = add(add(10,10), add(add(15,5),20));
 
 var rn = Math.floor(Math.random()*0);
 
+console.log('====================================================');
+console.log(rn);
+console.log('========================================================');
+
+
 //리턴값이 없으니 단독호출
 infLooping();
 

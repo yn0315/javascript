@@ -8,7 +8,7 @@ var a =10, b = 20;
 var result = '' + a + b;
 
 
-console.log(`result ${result}`);
+console.log(`문자열로 처리 result ${result}`);
 
 
 // 명시적 숫자변환
@@ -20,7 +20,7 @@ var m = '100', n = '5.11';
 // var result2 = parseInt(m) + parseFloat(n);//실수를 정수로 변환하려면 parseint로 쓰면 됨
 var result2 = (+m) + (+n);
 
-console.log(`result2 ${result2}`);
+console.log(`숫자로 처리 result2 ${result2}`);
 
 
 //명시적 논리변환

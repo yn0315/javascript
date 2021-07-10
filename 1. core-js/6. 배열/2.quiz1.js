@@ -17,7 +17,7 @@ var average;
 var scores = [98, 32, 66, 87, 49, 12, 100, 82, 100];
 
 //조건부 순회할 때 좋음
-for (var i=0; i<scores.length; i++) {
+for (var i = 0; i < scores.length; i++) {
     if (i % 2 === 0) {//요소번호 0,2,4,6,8번  
 
         total +=scores[i];

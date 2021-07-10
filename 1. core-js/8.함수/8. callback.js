@@ -9,7 +9,7 @@ function showNumbers (n) {
 // showNumbers(5);
 
 function showOddNumbers(n) {
-    for (var i =1; i <=n; i++) {
+    for (var i = 1; i <= n; i++) {
         if (i % 2 ===1) {
         console.log(i);
         }
@@ -21,7 +21,7 @@ showOddNumbers(10);
 console.log('=================================================================');
 //콜백함수                  //콜백/ 함수입력
 function showAllNumbers(n, condition) {
-    for (var i =1; i <=n; i++) {
+    for (var i = 1; i <= n; i++) {
         if (condition(i)) {
             console.log(i);
         }
@@ -58,3 +58,22 @@ var numbers = [1,2,3,4,5,6,7,8,9,10];
 
 var results= filter(numbers, n => n % 3 === 0);
 console.log(results);
+
+
+
+console.log('=====================================================');
+function arrayFn (array, condition) {
+    var arrayResult= [];
+    for (var n of array) {
+        if (condition(n)) {
+            arrayResult.push(n);
+        }
+    }return arrayResult;
+}
+var numbers2 = [1,2,3,4,5,6,7,8,9,10]
+// var results2 = arrayFn(numbers2, function (n) {
+//     return n % 2 === 0;
+// });
+var results2 = arrayFn(numbers2, n => n % 2 === 0);
+
+console.log(results2);

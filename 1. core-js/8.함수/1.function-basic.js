@@ -54,4 +54,4 @@ add2(30,50);
 
 //함수를 변수에 할당
 var cac = calcAreaCircle;
-cac(5);
+cac(5); //함수호출

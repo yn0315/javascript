@@ -2,8 +2,8 @@
 
 function foo(x) {
     var y = 10;
-    console.log(x);
-    console.log(y);
+    console.log(`x: ${x}`);
+    console.log(`y: ${y}`);
 }
 console.log('================================================');
 // console.log(x);함수 밖에서는 못 씀, 호출로 써야함
@@ -19,7 +19,7 @@ function bar() {
 }
 
 bar();
-//함수호출이 끝나면 지역변수 사라짐, 일회용//
+//함수호출이 끝나면 지역변수 사라짐, 호출용, 일회용
 console.log(`함수외부: ${z}`);
 
 //메모리에는 전역변수와 지역변수 영역이 따로 있음

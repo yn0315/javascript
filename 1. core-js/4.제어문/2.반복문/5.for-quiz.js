@@ -37,7 +37,7 @@
 
 var rn = Math.floor(Math.random() * 8) + 2;//2 이상 10미만/  (10-2)+2
 
-var gugu = '';
+var gugu = '';//gugu라는 변수에 문자열을 삽입함을 선언
 
 gugu += '============================\n';
 
