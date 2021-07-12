@@ -14,7 +14,7 @@ console.log('=====================================================');
 
 var z = 'global';//전역변수
 function bar() {
-    var z = 'local';//지역변수
+    var z = 'local';//지역변수 우선권, 우선참조
     console.log(`함수내부: ${z}`);
 }
 
