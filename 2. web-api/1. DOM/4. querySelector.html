@@ -23,20 +23,27 @@
         
     //   const $banana = document.querySelector('.banana');//쿼리셀렉터는 css문법 써야함 클래스 바나나
     // const $banana = document.querySelector('#fruits > li:nth-child(2)');
-    const $banana = document.querySelector('li.apple + li');
+    const $banana = document.querySelector('li.apple + li');//li.apple이 형인 li, banana
     console.log($banana);
 
     $banana.style.color = 'yellow';
 
-    const $elements = document.querySelectorAll('#fruits > li');
+    console.log('====================================================');
+    const $grape = document.querySelector('li.banana + li'); //li.banana가 형인 li, grape
+    console.log($grape);
+    $grape.style.color = 'blue';
+
+    console.log('========================================================');
+
+    const $elements = document.querySelectorAll('#fruits > li');//id가 fruits의 자식 li들
     console.log($elements);
 
     //선택자로 선택된 요소가 없으면 null 반환
-    const test = document.querySelector('#peach');
+    const test = document.querySelector('#peach');//id가 peach인 요소가 없어서
     console.log(`test :${test}`);
 
     //css선택자 문법이 틀리면 에러발생
-    const test2 = document.querySelector('&mango');
+    const test2 = document.querySelector('&mango');//&는 css문법에 없음
     
     </script>
 

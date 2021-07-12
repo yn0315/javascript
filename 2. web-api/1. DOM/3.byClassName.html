@@ -20,12 +20,17 @@
 
 
     <script>
-        
         const $elements = document.getElementsByClassName('fruit');
         console.log($elements);
 
+        $elements[2].style.fontStyle = 'italic';
+
         const $banana = document.getElementsByClassName('banana');
         $banana[0].style.color = 'yellow';
+
+        console.log('================================================================');
+        const $pineapple = document.getElementsByClassName('pineapple');
+        $pineapple[0].style.fontStyle = 'italic';
     </script>
 
 

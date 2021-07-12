@@ -33,14 +33,16 @@
             length: 3,
             name: '유사배열'
         };
-        console.log(arr[1]);
+        console.log(arr[1]);//유사배열이라 배열형태로 참조가능
         console.log(arr.length);
-        // arr.push('d');
+        // arr.push('d');//push는 안됨 완전한 배열은 아니라서 에러뜸
         console.log(arr);
 
         console.log('=============================================');
 
         const $fruits = document.getElementById('fruits');
+
+        console.log('=================================================');
         const $elements = $fruits.getElementsByTagName('li');
         console.log($elements);
 

@@ -3,7 +3,7 @@ const pi = 3.14159265
 // 변경 안됨, 상수는 항상 같은 수라고 생각하기
 
 //세율
-const TAX_RATE = 0.1;
+const TAX_RATE = 0.1;//상수이름은 대문자로!
 
 let preTaxPrice = 100; //세전가격
 
@@ -30,6 +30,7 @@ const arr = [1, 2, 3];
 
 arr[1] = 20;
 
+console.log(arr);
 
 //처음에 const로 써놓고 변경해야하면 let으로 바꾸기
 //배열 객체는 그냥 const로 사용하기
