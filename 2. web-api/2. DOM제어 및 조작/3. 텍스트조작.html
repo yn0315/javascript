@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="greeting">Hollo <span>World!</span></div>
+    <script>
+        const $greeting = document.querySelector('#greeting');
+        console.log($greeting.textContent);
+
+        // $greeting.textContent = '안녕하세요';
+
+        $greeting.innerHTML = '<span>안녕</span>하세요'//안녕만 색깔 바꾸고 싶을 때
+    </script>
+</body>
+
+</html>
