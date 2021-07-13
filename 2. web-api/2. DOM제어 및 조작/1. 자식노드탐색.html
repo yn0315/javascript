@@ -22,9 +22,11 @@
 
 
     <script>
+        //요소취득시에는 $붙이고 노드탐색(자식,부모,형제)시에는 $ 안씀!!!!!!!!
         //노드탐색의 기점이 되는 요소 취득
         const $fruits = document.getElementById('fruits');
         console.log($fruits);
+
         //기준노드의 모든 자식노드를 탐색, 텍스트노드 포함
         const childNodes = $fruits.childNodes;
         console.log(childNodes);
@@ -34,12 +36,13 @@
         console.log(children);
 
         //기준노드의 첫번째 자식 노드를 탐색
-        console.log($fruits.firstChild);
-        console.log($fruits.firstElementChild);
-
+        console.log('========================================================');
+        console.log($fruits.firstChild);//텍스트노드 포함
+        console.log($fruits.firstElementChild);//텍스트노드미포함
+        console.log('====================================================================');
         //기준노드의 마지막 자식 노드를 탐색
-        console.log($fruits.lastChild);
-        console.log($fruits.lastElementChild);
+        console.log($fruits.lastChild);//텍스트노드 포함
+        console.log($fruits.lastElementChild);//텍스트노드미포함
 
         //기준노드의 자식노드 존재여부 확인
         //hasChildNodes()는 공백텍스트 존재시 true가 나옴에 주의
@@ -48,9 +51,6 @@
 
         //텍스트 노드를 제외한 자식 요소노드의 존재 유무확인
         console.log(!!$testDiv.children.length);
-    
-    
-    
     </script>
 </body>
 
