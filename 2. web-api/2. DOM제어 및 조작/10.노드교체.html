@@ -19,13 +19,13 @@
 
 
     <script>
-        const $fruits = document.querySelector('#fruits');
+        const $fruits = document.querySelector('#fruits');//요소노드 추출
 
         //애플노드를 망고노드로 교체
-        const $mango = $fruits.firstElementChild.cloneNode();
-        $mango.textContent = 'Mango';
+        const $mango = $fruits.firstElementChild.cloneNode();//애플노드를 망고노드에 복제
+        $mango.textContent = 'Mango';//망고노드에 텍스트추가
 
-        $fruits.replaceChild($mango,$fruits.firstElementChild);
+        $fruits.replaceChild($mango,$fruits.firstElementChild);//애플노드 자리에 새로 복제한 망고노드를 대체
 
         // 바나나를 삭제
         $fruits.removeChild($fruits.lastElementChild);

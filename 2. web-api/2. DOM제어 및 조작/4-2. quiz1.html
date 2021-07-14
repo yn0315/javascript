@@ -72,8 +72,8 @@
         //5. 클래스 obj3의 자식요소 li요소 모두의 font-weight를 bold로 지정하세요.    
 
         const $object3 = document.querySelector('.obj3');
-        const $object3li = [...$object3.children]//오브젝트 밑에 li들을 배열로 해서 반복문 돌림
         // $object3.style.fontWeight = 'bold';
+        const $object3li = [...$object3.children]//오브젝트 밑에 li들을 배열로 해서 반복문 돌림
         for (let $li of $object3li) {
             $li.style.fontWeight = 'bold';
         }

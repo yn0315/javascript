@@ -15,28 +15,28 @@
     </ul>
 
     <script>
-        const $fruits = document.querySelector('#fruits');
+        const $fruits = document.querySelector('#fruits'); //요소노드 추출
 
         //li -apple의 원본 요소 취득
         const $apple = $fruits.firstElementChild;
-
+        // console.log($apple);
         //apple의 사본 생성 (얕은 복사: 자기 자신 노드만 복사/속성노드까지는 복사(클래스 아이디))
-        const $shallowClone = $apple.cloneNode(); //함수임 괄호 필수
+        const $shallowClone = $apple.cloneNode(); //함수임 괄호 필수//비워두면 얕은 복사//텍스트 'Apple'은 복사안됨
         console.log($shallowClone);
 
-        $shallowClone.textContent = 'Apple2';
-        $fruits.appendChild($shallowClone);
+        $shallowClone.textContent = 'Apple2';//텍스트 추가해서
+        $fruits.appendChild($shallowClone);//꽂아넣기
 
-        //apple의 사본생성(깊은 복사: 자기 자신 포함 모든 자손노드를 복제)
+
+        // //apple의 사본생성(깊은 복사: 자기 자신 포함 모든 자손노드를 복제)
         const $deepClone = $apple.cloneNode(true);//deep으로 하려면 논리타입으로 true써 넣기//false가 기본값(얕은복사)
         console.log($deepClone);
 
         $fruits.appendChild($deepClone);
 
-        //ul을 깊은 복사
+        // ul을 깊은 복사
         const $ulClone = $fruits.cloneNode(true);
         $fruits.appendChild($ulClone);
-        
     </script>
 
 </body>
