@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="email" id="account" value="abc123@naver.com">
+
+
+    <script>
+        const $input = document.querySelector('input');
+        console.log($input.attributes);
+        console.log($input.attributes.id);//키로 접근
+        console.log($input.attributes.id.value);//키로 접근
+        // console.log($input.attributes[1]);//인덱스로 접근
+        $input.attributes.id.value = 'acc';
+
+
+        $input.attributes.value.value = 'abc123@gmail.com';
+        $input.attributes.type.value = 'check_box';
+
+    </script>
+
+
+</body>
+
+</html>

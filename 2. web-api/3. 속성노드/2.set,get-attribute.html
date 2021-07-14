@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="email" id="account" value="abc123@naver.com">
+
+
+    <script>
+        const $input = document.querySelector('input');
+        //input태그의 value 속성 값을 얻고 싶다.
+        //   const email = $input.attributes.value.value;
+
+        //같은 방법
+        const email = $input.getAttribute('value');
+        console.log(email);
+        console.log($input.getAttribute('id'));
+
+        //value속성의 값을 변경
+        $input.setAttribute('value', 'bbb222@gmail.com');
+
+        //input에 새로운 속성추가
+        $input.setAttribute('title', '입력창이다');//커서 가져다대면 뜸
+
+        //value 속성을 제거
+        $input.removeAttribute('value');
+
+        //value 속성이 존재하는지 여부확인
+        console.log($input.hasAttribute('value'));
+
+    </script>
+
+
+</body>
+
+</html>
