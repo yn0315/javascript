@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="btn">클릭하세요</button>
+    <button id ="btn2">클릭하세요2</button>
+
+
+    <script>
+function hello() {
+    alert('안녕하세요');
+}
+
+const $btn = document.getElementById('btn');
+
+$btn.onclick = hello;//여기서는 함수이름만 써야함
+
+const $btn2 = document.getElementById('btn2');
+
+// //함수리터럴 //= (값) : 변수에 저장가능//방식으로 써서 한번에 집어넣기..
+// $btn2.onclick= function(){
+//     alert('잘가세요');
+// };
+
+// $btn2.onclick = bye;
+//화살표함수
+$btn2.onclick = () => alert('잘가세요');
+
+//프로퍼티방식의 단점: 하나의 이벤트당 하나의 핸들러만 대입할 수 있다!!!
+//여러 개의 핸들러를 넣을 수 없다.
+
+$btn2.onclick = () => {
+    $btn2.style.background = 'tomato';
+};
+
+//이벤트 핸들러 제거
+$btn2.onclick = null;//기본값이 null로 설정되어있어서 제거하려면 null로 바꿔줌
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: block;
+        }
+
+        .menu.title {
+            cursor: pointer;
+        }
+
+        .menu.title::before {
+            content: ▶;
+        }
+
+        ul {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="lunches" class="menu">
+        <span class="title">추천메뉴(click me)</span>
+        <ul>
+            <li>짜장면</li>
+            <li>돈까스</li>
+            <li>제육볶음</li>
+            <li>햄버거</li>
+        </ul>
+    </div>
+
+
+    <script>
+        const $title = document.querySelector('.title');
+        const $ul = document.querySelector('ul');
+
+        function hidden() {
+            $ul.classList.toggle('hide');
+    
+        }
+
+        $title.addEventListener('click', hidden);
+    </script>
+
+</body>
+
+</html>

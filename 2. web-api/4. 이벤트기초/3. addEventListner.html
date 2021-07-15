@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">클릭하세요</button>
+
+
+
+    <script>
+        const $btn = document.getElementById('btn');
+
+        //이벤트 핸들러 함수 정의
+
+        const hello = function () {
+            alert('안녕안녕');
+        };
+
+        //여러개 대입가능
+        $btn.addEventListener('click', hello);
+        $btn.addEventListener('click', function () {
+            $btn.style.background = 'orange';
+        });
+        $btn.addEventListener('click', () => {
+            $btn.textContent = '클릭완료';
+        });
+
+        //이벤트핸들러 제거//직접함수 집어넣은 건(두세번째) 제거안됨
+        $btn.removeEventListener('click', hello);
+    </script>
+
+</body>
+
+</html>
