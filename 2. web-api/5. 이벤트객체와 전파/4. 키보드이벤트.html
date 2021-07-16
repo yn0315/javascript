@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text">
+    <p class="msg"></p>
+
+
+
+
+
+    <script>
+        const $input = document.querySelector('input');
+        const $msg = document.querySelector('.msg');
+
+        $input.addEventListener('keyup', e => {
+            console.log(e.key);//키보드이벤트에만 있는거!
+
+            if (e.key ==='Enter') {
+                $msg.textContent = e.target.value;///e.target이 인풋이라..
+                e.target.value = '';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

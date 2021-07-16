@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #fruits {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        #fruits li {
+            width: fit-content;
+            cursor: pointer;
+            background: lightgray;
+            margin-right: 20px;
+        }
+
+        .active {
+            color: red;
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="fruits">
+        <li id="apple" class="active">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="grape">Grape</li>
+    </ul>
+    <div>선택된 과일: <em class="msg">apple</em></div>
+
+    <br>
+
+    <label>
+        #새로운 과일 추가: <input type="text" class="text-box">
+        <button id="add">추가</button>
+    </label>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+        const $msg = document.querySelector('.msg');
+
+        //이벤트 핸들러 함수
+        function activate(e) {
+
+            //e.target을 제한하는 방법//이거 안걸어놓으면 ul영역 눌렀을 때 다 액티브걸림
+            if (!e.target.matches('#fruits > li')) {
+                return;
+            }
+            for (let $li of [...$fruits.children]) { //주변에 있는 액티브를 다 봐야하니까 반복문 돌림
+                if ($li.classList.contains('active')) {
+                    $li.classList.remove('active'); //액티브 찾아서 삭제하는 코드
+                    break;
+                }
+            }
+            e.target.classList.add('active'); //액티브 부여코드
+            $msg.textContent = e.target.getAttribute('id'); //텍스트추가코드
+        }
+
+        // //li들에게 이벤트를 부여하는 함수
+        // function addHandler() {
+        //     for (let $li of [...$fruits.children]) {
+        //         $li.addEventListener('click', activate);
+        //     }
+        // }
+
+        // //이벤트부여함수 호출
+        // addHandler();
+
+        //최초 한번만 ul에 activate이벤트를 부여, 전파시키기 위해
+        $fruits.addEventListener('click', activate);
+
+
+
+
+
+        //과일 동적추가
+        const $addBtn = document.getElementById('add');
+        const $textBox = document.querySelector('.text-box');
+
+        $addBtn.addEventListener('click', e => {
+            const $li = document.createElement('li');
+            $li.textContent = $textBox.value;
+            $li.setAttribute('id', $li.textContent.toLocaleLowerCase());//아이디 소문자로
+
+            $fruits.appendChild($li);
+            $textBox.value = '';
+           
+            
+            //현재코드는 모든 li들에게 하나하나 이벤트핸들러activate를 부여하고 있음
+            //특히 동적으로 추가되는 li의 경우 매번 핸들러를 등록하는 행위는 성능저하와 유지보수 부담의 원인이 됨
+            // $li.addEventListener('click', activate);
+        });
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
