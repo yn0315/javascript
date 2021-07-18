@@ -12,39 +12,43 @@
 
 
     <script>
-        const rn = Math.floor(Math.random() * 100) + 1;
+        const rn = Math.floor(Math.random() * 101);
         let countPlus = 0;
         let countMinus = 5;
         let quiz = confirm('up & down 게임을 시작할까요');
-        let number = +prompt('1-100사이의 숫자를 입력하세요.');
+        let number = +prompt('0 - 100사이의 숫자를 입력하세요.');
 
 
         while (true) {
             const random = Math.floor(Math.random() * 20) + 1;
-            let realnumber = (`${rn-random}'-'${rn+random}`);
+            let realnumber = (`${rn-random} - ${rn+random}`);
             let number = +prompt(`${realnumber}사이의 숫자를 입력하세요.`);
 
             if (number === rn) {
                 countPlus++
                 break;
+
             } else if (number > rn) {
                 countPlus++
                 countMinus--
                 alert('DOWN!');
                 alert(`아쉽지만 정답이 아닙니다. 기회가 ${countMinus}번 남았습니다.`);
-               
+
             } else if (number < rn) {
                 countPlus++
                 countMinus--
                 alert('UP!');
                 alert(`아쉽지만 정답이 아닙니다. 기회가 ${countMinus}번 남았습니다.`);
-            } else if (countMinus === 0) {
+
+            }
+            if (countMinus === 0) {
                 alert('모든 기회를 소진하셨군요. 계속 문제를 풀어주세요.');
             }
 
         }
 
         alert(`${countPlus}번만에 정답을 맞추셨군요!`);
+        
     </script>
 
 
