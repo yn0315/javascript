@@ -16,12 +16,15 @@
         let countPlus = 0;
         let countMinus = 5;
         let quiz = confirm('up & down 게임을 시작할까요');
+
         let number = +prompt('0 - 100사이의 숫자를 입력하세요.');
 
 
         while (true) {
             const random = Math.floor(Math.random() * 20) + 1;
+
             let realnumber = (`${rn-random} - ${rn+random}`);
+            
             let number = +prompt(`${realnumber}사이의 숫자를 입력하세요.`);
 
             if (number === rn) {
