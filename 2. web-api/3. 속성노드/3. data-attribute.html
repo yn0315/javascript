@@ -19,10 +19,12 @@
 
 
     <script>
-        const $users = document.querySelector('.users');
+        const $users = document.querySelector('.users');//요소노드 추출
 
         //배열 디스트럭쳐링 (구조분해 할당)
+        //각각 추출하면 번거로우니 자리 하나당 하나씩 할당하는 방법
         const [$user1, $user2] = [...$users.children];
+
         console.log($user1.getAttribute('id'));
         console.log($user1.getAttribute('data-user-id'));
 

@@ -15,9 +15,9 @@
     <script>
         const $link = document.querySelector('a');
         $link.onclick = e => {
-            if (!confirm('정말로 이동할까요?')) {
-                e.preventDefault();
-            } //
+            if (!confirm('정말로 이동할까요?')) {//취소를 누르면
+                e.preventDefault();//이동막음
+            } 
         };
     </script>
 </body>

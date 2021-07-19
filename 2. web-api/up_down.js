@@ -1,8 +1,10 @@
-//전역변수 선언 부분
+//전역변수 선언 부분//
 //필요한 데이터: 랜덤숫자 정답,  최소값, 최대값, 카운트다운, 정답입력횟수
 
 const MIN = 1; //얘네는 상수라 변하지 않음
 const MAX = 100;
+
+//데이터들의 기준이 일정한 것이 아니라 배열이 아닌 객체로 작성
 const gameDatas = {
     secretNumber: Math.floor(Math.random() * (MAX - MIN + 1)) + MIN,
     min: MIN, //이게 가변적 데이터라 이걸 사용해야함
@@ -15,7 +17,7 @@ const gameDatas = {
 
 
 
-//함수 정의 부분
+//함수 정의 부분//
 
 //사용자의 승패 여부를 확인해서 알림창으로 알려주는 함수
 function checkCountDown(countDown) {
@@ -40,7 +42,7 @@ function checkAnswer() {
     console.log(gameDatas);
 
     //객체 디스트럭쳐링 (ES6)
-    const {secretNumber, answer, count, countDown} = gameDatas; //필요한 키만 뽑아서 사용, 이후부터는 gameDagas까지 안 써도 됨
+    const {secretNumber, answer, count, countDown} = gameDatas; //필요한 키만 뽑아서 사용, 이후부터는 gameDatas까지 안 써도 됨
 
     if (secretNumber === answer) {
         //countDown 안에 맞췄는지 여부를 판단하는 함수 호출
@@ -74,7 +76,8 @@ function inputAnswer() {
 
 
 
-//메인 실행 부분
+//메인 실행 부분//
+//즉시실행함수로
 (function () {
 
     //게임 시작 안내 메시지

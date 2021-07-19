@@ -36,12 +36,12 @@
 
         //DocumentFragment: 진정한 버츄얼 돔
         const $frag = document.createDocumentFragment();
-        for (let f of fNames) {
-            const $li = document.createElement('li');
-            $li.textContent = f;
+        for (let f of fNames) {//fName배열에서 요소 하나씩 뽑아 f에 넣고
+            const $li = document.createElement('li');//li 생성해서
+            $li.textContent = f;//li에 f 이름으로 텍스트 추가하고
             $frag.appendChild($li);//frag에 집어넣고
         }
-        $fruits.appendChild($frag);//여기서 추가!
+        $fruits.appendChild($frag);//여기서 한번에 추가!
 
 
 

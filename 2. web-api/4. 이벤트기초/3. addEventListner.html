@@ -27,10 +27,13 @@
         $btn.addEventListener('click', hello);//함수이름옆에 괄호 붙이면 호출이라 붙이면 안됨 이건 그냥 대입하는거라.
         $btn.addEventListener('click', function () {
             $btn.style.background = 'orange';
+            
+            $btn.textContent = '클릭완료';//밑에다 따로 썼었는데 한번에 써도 적용됨
+            $btn.style.color = 'gray';
         });
-        $btn.addEventListener('click', () => {
-            $btn.textContent = '클릭완료';
-        });
+        // $btn.addEventListener('click', () => {
+        //     $btn.textContent = '클릭완료';
+        // });
 
         //이벤트핸들러 제거//직접함수 집어넣은 건(두세번째) 제거안됨
         $btn.removeEventListener('click', hello);

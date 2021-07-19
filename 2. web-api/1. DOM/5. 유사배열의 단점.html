@@ -34,7 +34,7 @@
 
     <script>
         //HTMLCollection: 유사배열 - Live DOM Collection
-        const $elements = document.getElementsByClassName('red');
+        const $elements = document.getElementsByClassName('red');//li들 뽑아내기
 
         // for (let i = 0; i < $elements.length; i++) {
         //     $elements[i].className = 'blue'; //클래스네임이 바뀌는 순간 배열에서 빠져 Apple하고 Grape만 블루로 바뀜
@@ -47,7 +47,7 @@
         //const realArray = Array.from($elements);
 
         //ES6+ 
-        const realArray = [...$elements];
+        const realArray = [...$elements];//뽑아낸 li들을 진짜 배열로 변환
         console.log(realArray);
 
         for (let i = 0; i < realArray.length; i++) {

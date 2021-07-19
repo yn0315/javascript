@@ -40,8 +40,8 @@
 
         console.log('======================================================');
         //그냥 써봄
-        const parentEl = $banana.parentElement;
-        console.log(parentEl);
+        // const parentEl = $banana.parentElement;
+        // console.log(parentEl);
 
         console.log('=========================================================');
 
@@ -61,10 +61,11 @@
 
         //table태그는 아래에 자동으로 tbody태그가 삽입됨.
         const child = $board.children;
-        console.log(child);
+        console.log(child);//tbody가 뜸
 
         //tr을 취득
-        const trList = $board.firstElementChild;
+        const trList = $board.firstElementChild.children;
+        //중간에 tbody가 있으니 첫번째자식의 자식요소탐색으로 취득
         console.log(trList);
     </script>
 

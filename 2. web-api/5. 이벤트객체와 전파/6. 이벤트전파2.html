@@ -39,7 +39,7 @@
     </div>
 
     <script>
-        // useCapture: 캡쳐링 여부(논리)
+        // useCapture: 캡쳐링 여부(논리)//역순으로 뜨게 하는 거 
         // stop: 전파중지 여부(논리)
         function bubbling(useCapture, stop) {
             document.querySelector('body').addEventListener('click', e => {
@@ -56,7 +56,7 @@
             }, useCapture);
             document.querySelector('.target').addEventListener('click', e => {
                 alert('target!');
-                if (stop) {
+                if (stop) {//stop이 true일 때 버블링을 멈춰라 // stop === true를 함축해서 작성
                     e.stopPropagation();
                 }
             }, useCapture);
