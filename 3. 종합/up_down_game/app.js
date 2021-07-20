@@ -78,7 +78,7 @@ function processCorrect($target) {
     const $finish = document.getElementById('finish');
     $finish.classList.add('show');
     $target.setAttribute('id', 'move');//정답아이콘에 아이디 부여
-
+    //매개변수로써의 $target임//요소노드가 아님
 }
 
 
@@ -119,7 +119,7 @@ function checkAnswer($target) {
         console.log(gameDatas);
 
         //정답 체크 함수 호출
-        checkAnswer(e.target);
+        checkAnswer(e.target);//답을 알고있는 대상이 e.target!
     });
 
 
