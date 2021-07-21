@@ -45,8 +45,8 @@ function executeUpDownAnimation(isUp) {
        $down.classList.remove(ANI_CLASS_NAME);
        $up.classList.add(ANI_CLASS_NAME);
    } else {
-    $up.classList.remove(ANI_CLASS_NAME);
-    $down.classList.add(ANI_CLASS_NAME);
+       $up.classList.remove(ANI_CLASS_NAME);
+       $down.classList.add(ANI_CLASS_NAME);
    }
 }
 
