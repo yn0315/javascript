@@ -26,7 +26,7 @@ console.log(fruits);
 
 console.log('======================================================');
 //배열 요소 순회 (전체 참조)
-for (var i=0; i <fruits.length; i++) {
+for (var i=0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 

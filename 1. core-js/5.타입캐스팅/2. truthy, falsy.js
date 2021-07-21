@@ -18,7 +18,8 @@ if ([]) console.log('ok9');
 if ({}) console.log('ok10');
 
 console.log('======================================');
-var orangeJuice = 10;//true니까 조건식까지(부등호) 안쓰고 조건만 써도 됨 
+var orangeJuice = 10;
+//true니까 조건식까지(부등호) 안쓰고 조건만 써도 됨 
 if(orangeJuice) {
     console.log('오렌지쥬스가 있습니다.');
 }else {

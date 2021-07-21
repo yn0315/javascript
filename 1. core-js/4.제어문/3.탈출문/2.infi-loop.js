@@ -5,7 +5,7 @@
 
 while(true) {
     var rn = Math.floor (Math.random() *10) +1;
-    if (rn ===6) break;
+    if (rn === 6) break;
     console.log(rn);
 }
 
