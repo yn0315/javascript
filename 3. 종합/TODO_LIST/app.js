@@ -179,14 +179,28 @@ function removeToDoData($delTarget) {
 //할 일 수정 처리 함수
 
 function modifyToDoData($modTarget) {
-       
-    const $input= document.createElement('input');
-    const $text = document.querySelector('.text')
-    $input.classList.add('mod-input');   
 
-    // $modTarget.removeChild($modTarget.firstElementChild);
-    $modTarget.replaceChild($input, $modTarget.  );
-    console.log($modTarget);
+    const $input = document.createElement('input');
+    const $text = document.querySelector('.text')
+    $modTarget.replaceChild($input, $modTarget.lastElementChild);
+    $input.classList.add('mod-input');
+    // $input.textContent(`$text.textContent`);
+    $input.setAttribute('value', $text.textContent);
+    // const $span = document.querySelector('.modify > span');
+    // // $span.classList.remove('lnr lnr-undo'); 
+    
+
+    // $span.classList.toggle('lnr-checkmark-circle');
+    // console.log($span);
+
+}
+
+//수정완료처리함수
+
+function finishModify($finishBtn) {
+    $finishBtn.classList.toggle('lnr-checkmark-circle');
+    console.log($finishBtn);
+
 }
 
 
@@ -236,12 +250,24 @@ function modifyToDoData($modTarget) {
 
         if (!e.target.matches('.modify span')) return; //클릭이벤트 범위제한
 
-        // console.log('삭제버튼 클릭됨', e.target);
-        // console.log(e.target.parentNode.parentNode);
-        modifyToDoData(e.target.parentNode);
+        // console.log('수정버튼 클릭됨', e.target);
+        // console.log(e.target.parentNode.previousElementSibling);
+        modifyToDoData(e.target.parentNode.previousElementSibling);
+        
+    })
 
+    //수정버튼 모양 바뀌는 이벤트
+    const $span = document.querySelector('.modify > span');
+    // $span.classList.remove('lnr lnr-undo'); 
+    $span.addEventListener('click', e => {
+        
+        finishModify($span);
+        // $span.classList.toggle('lnr-checkmark-circle');
+        // console.log($span);
 
     })
+
+
 
 
 })();

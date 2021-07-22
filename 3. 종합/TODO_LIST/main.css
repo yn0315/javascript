@@ -123,6 +123,13 @@ section.todo-template .content .todo-list .todo-list-item .checkbox .text {
     margin-left: 8px;
 }
 
+section.todo-template .content .todo-list .todo-list-item .checkbox .mod-input {
+    margin-left: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+
 section.todo-template .content .todo-list .todo-list-item div {
     font-size: 1.5em;
     cursor: pointer;
