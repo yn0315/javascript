@@ -178,21 +178,67 @@ function removeToDoData($delTarget) {
 
 
 //할 일 수정 처리 함수
+// //--------------------------------------------------------------------------------//
+// function modifyToDoData($modTarget) {
 
-function modifyToDoData($modTarget) {
+//     const $input = document.createElement('input');
+//     const $text = document.querySelector('.text');
+//     $modTarget.replaceChild($input, $modTarget.lastElementChild);
+//     $input.classList.add('mod-input');
+//     // $input.textContent(`$text.textContent`);
+//     $input.setAttribute('value', $text.textContent);
 
-    const $input = document.createElement('input');
-    const $text = document.querySelector('.text')
-    $modTarget.replaceChild($input, $modTarget.lastElementChild);
-    $input.classList.add('mod-input');
-    // $input.textContent(`$text.textContent`);
-    $input.setAttribute('value', $text.textContent);
+//     const $span = document.querySelector('.modify span');
+//     // $span.classList.remove('lnr lnr-undo'); 
+//     $span.classList.add('lnr-checkmark-circle');
+//     console.log($span);
+// }
+//=================================================================================//
 
-    const $span = document.querySelector('.modify span');
-    // $span.classList.remove('lnr lnr-undo'); 
-    $span.classList.add('lnr-checkmark-circle');
-    console.log($span);
+//할 일 수정모드 진입 이벤트 처리 함수
+function enterModifyNode($modSpan) {
+
+    //버튼모양을 교체 (클래스 교체)
+    $modSpan.classList.replace('lnr-undo', 'lnr-checkmark-circle');
+
+    //텍스트 span을 input:text로 교체
+    const $label = $modSpan.parentNode.previousElementSibling;
+    const $textSpan = $label.lastElementChild;
+    // console.log($textSpan);
+    const $modInput = document.createElement('input');
+
+    $modInput.setAttribute('type', 'text');
+    $modInput.setAttribute('value', $textSpan.textContent);
+    $modInput.classList.add('mod-input');
+
+    $label.replaceChild($modInput, $label.lastElementChild);
 }
+
+//할 일 수정 완료 이벤트 처리 함수
+function modifyToDoData($checkSpan) {
+
+    //버튼을 원래대로 되돌림
+    $checkSpan.classList.replace('lnr-checkmark-circle', 'lnr-undo');
+
+    //input:text를 span.text로 교체
+    const $label = $checkSpan.parentNode.previousElementSibling;
+    console.log($label);
+    const $modInput = $label.lastElementChild;
+    const $newSpan = document.createElement('span');
+    $newSpan.classList.add('text');
+    $newSpan.textContent = $modInput.value;
+    $label.replaceChild($newSpan, $modInput);
+
+    //배열데이터 수정
+    const idx= findIndexByDataId(+$label.parentNode.dataset.id);
+    todos[idx.text] = $newSpan.textContent;
+
+
+    console.log(todos);
+
+}
+
+
 
 
 //메인실행부
@@ -214,6 +260,8 @@ function modifyToDoData($modTarget) {
     //할 일 완료(체크박스)이벤트
     const $toDoList = document.querySelector('.todo-list');
     $toDoList.addEventListener('change', e => {
+
+        if (!e.target.matches('.checkbox input[type=checkbox]')) return;
         // console.log('체크박스 체인지 이벤트 발생!');
         //ul에 걸어도 위에 이벤트는 클릭이벤트라 버튼 눌러도 아무 일도 발생하지 않음
 
@@ -235,19 +283,25 @@ function modifyToDoData($modTarget) {
         removeToDoData(e.target.parentNode.parentNode);
 
     })
-
-    //할 일 수정버튼 클릭 이벤트
+    //==========================================================================================//
+    //할 일 수정버튼 클릭 이벤트(수정모드진입, 수정완료)
     $toDoList.addEventListener('click', e => {
 
-        if (!e.target.matches('.modify span')) return; //클릭이벤트 범위제한
+        //이벤트 발생 요소가 수정모드진입버튼이라면
+        if (e.target.matches('.modify span.lnr-undo')) {
+            enterModifyNode(e.target);
+            // console.log(e.target);
+            //이벤트 발생 요소가 수정확인 버튼이라면
+        } else if (e.target.matches('.modify span.lnr-checkmark-circle')) {
+            modifyToDoData(e.target);
+        } else {
+            return;
+        }
 
-        // console.log('수정버튼 클릭됨', e.target);
-        // console.log(e.target.parentNode.previousElementSibling);
-        modifyToDoData(e.target.parentNode.previousElementSibling);
-        // modifyToDoData(e.target.parentNode.parentNode);
+  
 
     })
-
+    //=============================================================================================//
 
 
 
