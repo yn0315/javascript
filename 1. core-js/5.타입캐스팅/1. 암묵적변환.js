@@ -9,6 +9,7 @@ console.log(ex);
 
 // 문자열과 숫자를 더하면 숫자를 문자열로 처리
 ex = 100 + '';
+console.log(ex);
 
 var logical = true + '';
 console.log(typeof logical);
